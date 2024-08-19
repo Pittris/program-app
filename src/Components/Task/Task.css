@@ -1,0 +1,30 @@
+.task {
+   display: flex;
+   flex-direction: column;
+   width: 500px;
+   margin: 20px 0;
+   justify-content: space-between;
+   align-items: center;
+ }
+ h2 {
+   color: #003FFC;
+ }
+p {
+   line-height: 2;
+}
+.authorize-btn {
+   color: white;
+   padding: 10px;
+   border-radius: 10px;
+   border: none;
+   margin: 10px auto;
+   cursor: pointer;
+}
+.task input {
+   width: 200px;
+   margin: 10px;
+}
+.task .border {
+   color: white;
+   margin-bottom: 2rem;
+}

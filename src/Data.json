@@ -1,0 +1,29 @@
+{
+   "programmer": [
+      {
+         "id": 1,
+         "name": "Karel Nový",
+         "type": "junior"
+      },
+      {
+         "id": 2,
+         "name": "Jana Plachá",
+         "type": "senior"
+      },
+      {
+         "id": 3,
+         "name": "Jan Pomalý",
+         "type": "senior"
+      },
+      {
+         "id": 4,
+         "name": "Libor Suchý",
+         "type": "senior"       
+      },
+      {
+         "id": 5,
+         "name": "Anna Rychlá",
+         "type": "junior"
+      }
+   ]
+}

@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+   /* box-sizing: border-box; */
+}
+
+footer {
+  background-color: #008FFC;
+  color: #1100FC;
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
