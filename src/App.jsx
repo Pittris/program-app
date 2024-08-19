@@ -44,9 +44,7 @@ function App() {
     validateData(temp);
   };
   const validateData = (programmer) => {
-    if (programmer.name === "") {
-      setValid(false);
-    } else if (programmer.name.trim().length === 0){
+    if (programmer.name.trim().length === 0) {
       setValid(false);
     } else {
       setValid(true);
