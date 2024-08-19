@@ -26,14 +26,29 @@ function App() {
   const [juniorProgrammerCount, setJuniorProgrammerCount] = useState(0);
   //  pocet senioru
   const [seniorProgrammerCount, setSeniorProgrammerCount] = useState(0);
+  const [valid, setValid] = useState(false);
 
   //  zazanamenavani zmen
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setNewProgrammer({
+    // setNewProgrammer({
+    //   ...newProgrammer,
+    //   [name]: value,
+    // });
+
+    const temp = {
       ...newProgrammer,
       [name]: value,
-    });
+    };
+    setNewProgrammer(temp);
+    validateData(temp);
+  };
+  const validateData = (programmer) => {
+    if (programmer.name === "") {
+      setValid(false);
+    } else {
+      setValid(true);
+    }
   };
   //  pridani noveho programatora
   const handleAdd = () => {
@@ -47,11 +62,12 @@ function App() {
       type: "junior",
     };
     setNewProgrammer(updatedProgrammer);
+    validateData(updatedProgrammer);
   };
   //  kontrola
-  //   useEffect(() => {
-  //     console.log(newProgrammer);
-  //   }, [newProgrammer]);
+  // useEffect(() => {
+  //   console.log(newProgrammer);
+  // }, [newProgrammer]);
 
   useEffect(() => {
     // Výpočet počtu juniorů a seniorů při načtení stránky
@@ -97,6 +113,7 @@ function App() {
             data={newProgrammer}
             handleChange={handleChange}
             handleAdd={handleAdd}
+            valid={valid}
           />
         </div>
       )}
@@ -108,9 +125,7 @@ function App() {
           />
         </div>
       )}
-      
     </div>
-    
   );
 }
 
